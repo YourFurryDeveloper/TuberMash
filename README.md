@@ -1,7 +1,7 @@
 # TuberMash
 Like FaceMash, but with YouTubers!
 
-I LOVE ['https://www.imdb.com/title/tt1285016/'](The Social Network), so I decided to create FaceMash, but with YouTubers. TuberMash does not require any connection to YouTube API, since you run the Python script to get the channels and their PFPs.
+I LOVE [The Social Network](https://www.imdb.com/title/tt1285016/), so I decided to create FaceMash, but with YouTubers. TuberMash does not require any connection to YouTube API, since you run the Python script to get the channels and their PFPs.
 
 
 ## How to use it
