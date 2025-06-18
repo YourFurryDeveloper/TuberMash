@@ -10,6 +10,9 @@ options.add_argument("--disable-gpu")
 driver = webdriver.Chrome(options=options)
 driver.get("https://www.youtube.com/shorts")
 
+# -----| SET THE AMOUNT OF CHANNELS HERE |-----
+channelsToGet = 50
+
 time.sleep(5)
 
 print("\nGetting elements...\n\n")
@@ -17,7 +20,7 @@ print("\nGetting elements...\n\n")
 final_channels = {}
 i = 0
 
-for i in range(50):
+for i in range(channelsToGet):
     i += 1
     print(f"Getting channel ({str(i)})")
     channelName = driver.find_element(By.CSS_SELECTOR, 'a.yt-core-attributed-string__link.yt-core-attributed-string__link--call-to-action-color.yt-core-attributed-string--link-inherit-color')
