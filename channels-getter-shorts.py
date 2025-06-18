@@ -11,7 +11,7 @@ driver = webdriver.Chrome(options=options)
 driver.get("https://www.youtube.com/shorts")
 
 # -----| SET THE AMOUNT OF CHANNELS HERE |-----
-channelsToGet = 50
+channelsToGet = 100
 
 time.sleep(5)
 
@@ -28,7 +28,7 @@ for i in range(channelsToGet):
     channelPfp = pfpElement.get_attribute('src')
     print(f"Channel handle: {channelName.text} | Channel PFP: {channelPfp}\n")
     final_channels[channelName.text] = channelPfp
-    time.sleep(1)
+    time.sleep(1.5)
     if i == 1:
         nextBtn = driver.find_element(By.CSS_SELECTOR, 'button.yt-spec-button-shape-next.yt-spec-button-shape-next--text.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--size-xl.yt-spec-button-shape-next--icon-button.yt-spec-button-shape-next--enable-backdrop-filter-experiment')
         nextBtn.click()
