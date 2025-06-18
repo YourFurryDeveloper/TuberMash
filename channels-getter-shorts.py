@@ -1,5 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 import time
 import os
@@ -24,7 +26,9 @@ for i in range(channelsToGet):
     i += 1
     print(f"Getting channel ({str(i)})")
     channelName = driver.find_element(By.CSS_SELECTOR, 'a.yt-core-attributed-string__link.yt-core-attributed-string__link--call-to-action-color.yt-core-attributed-string--link-inherit-color')
-    pfpElement = driver.find_element(By.CSS_SELECTOR, 'img.yt-core-image.yt-spec-avatar-shape__image.yt-core-image--fill-parent-height.yt-core-image--fill-parent-width.yt-core-image--content-mode-scale-to-fill.yt-core-image--loaded')
+    pfpElement = WebDriverWait(driver, 10).until(
+        EC.visibility_of_element_located((By.CSS_SELECTOR, "img.yt-core-image.yt-spec-avatar-shape__image.yt-core-image--fill-parent-height.yt-core-image--fill-parent-width.yt-core-image--content-mode-scale-to-fill.yt-core-image--loaded"))
+    )
     channelPfp = pfpElement.get_attribute('src')
     print(f"Channel handle: {channelName.text} | Channel PFP: {channelPfp}\n")
     final_channels[channelName.text] = channelPfp
