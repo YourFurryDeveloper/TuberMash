@@ -12,5 +12,5 @@ All you have to do is run `python3 channels-getter-shorts.py`, and it will outpu
 
 (This DOES have to be run on a webserver, as the cross-origin content policy will block the Google images when running the HTML file locally.)
 
-
+____
 I would LOVE to see if anybody alters or makes the project better! All I ask if you do is that you credit me (YourFurryDeveloper on GitHub) for the original code. :3
