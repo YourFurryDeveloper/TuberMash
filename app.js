@@ -47,3 +47,17 @@ tuber2.addEventListener("click", function() {
     .then(data => getNewTuber("1", data))
     .catch(error => console.error('Error fetching JSON:', error));
 });
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "ArrowLeft") {
+        fetch('./channels.json')
+        .then(response => response.json())
+        .then(data => getNewTuber("2", data))
+        .catch(error => console.error('Error fetching JSON:', error));
+    } else if (event.key === "ArrowRight") {
+        fetch('./channels.json')
+        .then(response => response.json())
+        .then(data => getNewTuber("1", data))
+        .catch(error => console.error('Error fetching JSON:', error));
+    }
+});
