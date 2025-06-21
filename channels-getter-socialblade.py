@@ -10,7 +10,9 @@ import json
 options = Options()
 options.add_argument("--disable-gpu")
 driver = webdriver.Chrome(options=options)
-driver.get("https://socialblade.com/youtube/lists/top/250/sb/all/US")
+
+# Socialblade URL (You chan change this to any Socialblade page)
+driver.get("https://socialblade.com/youtube/lists/top/100/sb/games/US")
 
 # -----| SET THE AMOUNT OF CHANNELS HERE |-----
 channelsToGet = 100
